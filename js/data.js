@@ -319,7 +319,7 @@ window.LYRA_DATA = (() => {
       note: {
         zh: '<p>Aqua意为水上，Polis意为都市。</p><p>水都市介绍：全称为水都特别市，亦被称为“水上都市”。英文：Aquapolis Special City／日文：アクアポリス特別市。别称“沚”“沚州”等。是“水都地区自治会”的首都。因位于海岸线上的浅水浅滩而得名“沚”。水都市是一座港口城市，是东方？？？大陆上的重要城市。<br>在大灾难前的200年里，水都市一直是全球重要的经济中心，外交中心及？？？洲最大的城市之一。<br>水都拥有？？？等景点。水都是历史文化名城，文化底蕴深厚。<br>水都行政辖区面积10710平方公里，截止大灾难发生前，水都特别市辖区内人口达到1100万（人口密度1027.08人/平方千米）。<br>因为历史原因，水都特别市是一座国际化的，多民族杂居的世界性大都市，无特定主要民族（种族），亦无指定官方语言。<br>水都市花为木槿花。<br>截止大灾难发生前，水都特别市总GDP达到了38223.94亿元，人均GDP亦达到了34.75万。但水都特别市辖区内有明显的贫富分化，贫民区的部分人们常年活在温饱线上下。<br>水都特别市是“水都地区自治会”的首都。水都特别市下辖八区（市辖区）三府（相当于县级市）六县（相当于县城）。<br>中心城区（水都市内四区／亦被称为“内四区”。）主要位于水都外环环线以内，是全市人口密度最高的区域，政府机关设置在内四区中的“水上区”。<br>近郊城区（水都市外四区／亦被称为“外四区”。）主要位于水都外环环线以外与首都大环线之内。其中外四区中的“北门区”是水都市的主要贫民区。</p>',
         en: '<p>Aqua means "water" and Polis means "city".</p><p>Water City — officially the Water Capital Special City, also known as "the City on the Water." English: Aquapolis Special City / Japanese: アクアポリス特別市. Also called "Zhi" or "Zhizhou," among other names. It is the capital of the "Water Capital Regional Autonomous Association." The name "Zhi" comes from the shallow waters and shoals along its coastline. Water City is a port city and an important city on the eastern ??? continent.<br>For the 200 years before the Great Disaster, Water City remained a major global economic center, a diplomatic hub, and one of the largest cities in ???.<br>Water City is home to ??? and other attractions. It is a historic and cultural city with a deep cultural heritage.<br>The administrative area of Water City covers 10,710 square kilometers. Just before the Great Disaster, the population within the Water Capital Special City reached 11 million (population density: 1,027.08 people per square kilometer).<br>For historical reasons, the Water Capital Special City is an international, multi-ethnic world metropolis with no single dominant ethnic group and no designated official language.<br>The city flower of Water City is the hibiscus.<br>Before the Great Disaster, the total GDP of the Water Capital Special City reached 3,822.394 billion yuan, with a per capita GDP of 347,500 yuan. Yet stark wealth gaps existed within its jurisdiction, and many in the slums lived perpetually at or below the subsistence line.<br>The Water Capital Special City is the capital of the "Water Capital Regional Autonomous Association." It administers eight districts (municipal districts), three prefectures (equivalent to county-level cities), and six counties (equivalent to county seats).<br>The central urban area (the four inner districts of Water City, also called the "Inner Four") lies mainly inside the Water City Outer Ring Road. It is the most densely populated part of the city, and government offices are located in the "Water District" of the Inner Four.<br>The suburban urban area (the four outer districts of Water City, also called the "Outer Four") lies mainly beyond the Water City Outer Ring Road and inside the Capital Ring Road. Among the Outer Four, the "North Gate District" is Water City\'s main slum.</p>',
-        ja: '<p>Aquaは水上、Polisは都市の意。</p><p>水都市紹介：正式名称は水都特別市、「水上都市」とも呼ばれる。英語：Aquapolis Special City／日本語：アクアポリス特別市。「沚」「沚州」などの別称を持つ。「水都地区自治会」の首都である。海岸線上の浅い水域と浅瀬に位置することから「沚」の名を得た。水都市は港湾都市であり、東方？？？大陸上の重要な都市である。<br>大災害前の200年間、水都市は世界有数の経済中心地であり、外交の中心地でもあり、？？？州最大の都市の一つであり続けた。<br>水都には？？？などの名所がある。水都は歴史文化の名城であり、深い文化的な蓄積を持つ。<br>水都の行政区域面積は10710平方キロメートル。大災害発生前の時点で、水都特別市の管内人口は1100万人（人口密度1027.08人／平方キロメートル）に達していた。<br>歴史的な事情により、水都特別市は国際的で多民族が混然と暮らす世界都市であり、特定の主要民族（人種）も指定公用語も存在しない。<br>水都市の市の花はムクゲである。<br>大災害発生前、水都特別市の総GDPは38223.94億元、一人当たりGDPも34.75万元に達した。しかし管内には顕著な貧富の差があり、スラム街の人々は長年ぎりぎりの生活を強いられていた。<br>水都特別市は「水都地区自治会」の首都である。八つの区（市轄区）、三つの府（県級市に相当）、六つの県（県城に相当）を管轄する。<br>中心城区（水都市の内四区／「内四区」とも呼ばれる）は主に水都外環状線の内側にあり、全市で最も人口密度が高い区域で、政府機関は内四区の「水上区」に置かれている。<br>近郊城区（水都市の外四区／「外四区」とも呼ばれる）は主に水都外環状線の外側と首都大環状線の内側に位置する。外四区のうち「北門区」が水都市の主要なスラム街である。</p>',
+        ja: '<p>Aquaは水上、Polisは都市の意。</p><p>水都市紹介：正式名称は水都特別市、「水上都市」とも呼ばれる。英語：Aquapolis Special City／日本語：アクアポリス特別市。「沚」「沚州」などの別称を持つ。「水都地区自治会」の首都である。海岸線上の浅い水域と浅瀬に位置することから「沚」の名を得た。水都市は港湾都市であり、東方？？？大陸上の重要な都市である。<br>大災害前の200年間、水都市は世界有数の経済中心地であり、外交の中心地でもあり、？？？州最大の都市の一つであり続けた。<br>水都には？？？などの名所がある。水都は歴史文化の名城であり、深い文化的な蓄積を持つ。<br>水都の行政区域面積は10710平方キロメートル。大災害発生前の時点で、水都特別市の管内人口は1100万人（人口密度1027.08人／平方キロメートル）に達していた。<br>歴史的な事情により、水都特別市は国際的で多民族が混然と暮らす世界都市であり、特定の主要民族（人種）も指定公用語も存在しない。<br>水都市の市の花はムクゲである。<br>大災害発生前、水都特別市の総GDPは38223.94億元、一人当たりGDPも34.75万元に達した。しかし管内には顕著な貧富の差があり、スラム街の人々は長年ぎりぎりの生活を強いられていた。<br>水都特別市は「水都地区自治会」の首都である。八つの区（市轄区）、三つの府（県級市に相当）、六つの県（県城に相当）を管轄する。<br>中心市街地（水都市の内四区／「内四区」とも呼ばれる）は主に水都外環状線の内側にあり、全市で最も人口密度が高い地域で、政府機関は内四区の「水上区」に置かれている。<br>近郊地域（水都市の外四区／「外四区」とも呼ばれる）は主に水都外環状線の外側と首都大環状線の内側に位置する。外四区のうち「北門区」が水都市の主要なスラム街である。</p>',
       },
     },
     {
@@ -415,12 +415,13 @@ window.LYRA_DATA = (() => {
       avatar: 'docs/img/members/toyoya-avatar.jpg',
       bio: {
         zh: '<span data-age="2006"></span>岁。「共鸣线」主催、企划及 Vocal。正在进行唱见活动。<br>上海戏剧学院、上海交通大学音乐学专业在读，曾参与 Vocaduo 等活动。希望创作出能够长期留在人们心中的作品与世界，让音乐成为能够陪伴人与时间共同延续的体验。',
-        en: '<span data-age="2006"></span> years old. Organizer and planner of LyraLine, serving as its Vocal; active as a cover singer.<br>Currently studying theatre and musicology at the Shanghai Theatre Academy and Shanghai Jiao Tong University; taken part in projects such as Vocaduo. Hope to create works and worlds that stay with people for a long time, and to make music an experience that accompanies people and time alike.',
+        en: '<span data-age="2006"></span> years old, utaite. Founder, PM and Vocal of LyraLine.<br>Majoring in theatre and musicology.<br>Taken part in projects such as Vocaduo.',
         ja: '2006年生まれ。歌い手。「共鳴線」の主催・企画・Vocalを担当。<br>現在、演劇と音楽学を学んでいる。英語・日本語・中国語の楽曲を歌うことを得意とし、これまでに Vocaduo や神椿「花譜 宿声 Hong Kong」創作募集などに参加。人々の心に長く残る作品や世界観を生み出し、音楽が人と時間に寄り添いながら続いていく体験となることを目指している。',
       },
       links: [
         { label: 'X', url: 'https://x.com/tokoyouta?s=21' },
         { label: 'YouTube', url: 'https://youtube.com/@tokoyouta?si=rpKc-pl8OPyU8Dhh' },
+        { label: 'Bilibili', url: 'https://space.bilibili.com/178786387?spm_id_from=333.1007.0.0' },
       ],
     },
     {
@@ -443,7 +444,7 @@ window.LYRA_DATA = (() => {
       avatar: 'docs/img/members/haneka-avatar.jpg',
       bio: {
         zh: '<span data-age="2004"></span>岁，插画师。平时多以合成音声为主体进行同人创作，单张创作曾在 X 上收获万赞。在共鸣线企划中担任《绿浮游》的插画和视觉指导。创作理念为描绘角色无机质的科技感，突出纤细、锐利、繁复的视觉风格。',
-        en: '<span data-age="2004"></span> years old, an illustrator. Doujin work centered on synthetic voices, with individual pieces drawing tens of thousands of likes on X.<br>For LyraLine, illustrated "Verdant Ephemera" and served as visual director. Creative focus on the inorganic, tech-inflected appeal of characters, rendered in a delicate, sharp and intricate style.',
+        en: '<span data-age="2004"></span> years old, illustrator. Doujin work centered on synthetic voices, with individual pieces drawing tens of thousands of likes on X.<br>For LyraLine, illustrated "Verdant Ephemera" and served as visual director. Creative focus on the inorganic, tech-inflected appeal of characters, rendered in a delicate, sharp and intricate style.',
         ja: '2004年生まれ。現役イラストレーター。普段は合成音声を主体とした同人創作を行っており、投稿作品はSNS上で多くの反応を集めている。<br>共鳴線プロジェクトでは『緑浮遊』のイラストおよびビジュアルディレクションを担当。創作理念は、キャラクターの無機質でテクノロジー感のある魅力を描き出すこと。繊細で鋭く、複雑なビジュアルスタイルを際立たせるのが得意。',
       },
       gallery: [
@@ -461,7 +462,7 @@ window.LYRA_DATA = (() => {
       avatar: 'docs/img/members/semi-avatar.jpg',
       bio: {
         zh: '毕业于谢尔丹动画系。动画师，负责背景绘制与动画制作。希望做出能连接人与人情感的温暖作品。曾参与 YouTube 动画《The Last Hand》的场景、动画和后期制作。',
-        en: 'A graduate of Sheridan College\'s animation program.<br>Working as an animator on backgrounds and animation, with the hope of making warm stories that connect people\'s emotions. Contributed to the setting, animation and post-production of the YouTube animation "The Last Hand."',
+        en: 'A graduate of Sheridan College\'s Animation Program.<br>Working as an animator on backgrounds and animation, with the hope of making warm stories that connect people\'s emotions. Contributed to the setting, animation and post-production of the YouTube animation "The Last Hand."',
         ja: 'シェリダン・カレッジのアニメーション学科を卒業。<br>アニメーターとして、背景制作やアニメーション制作を行っている。人と人の感情をつなぐような、温かみのある作品づくりを目指している。YouTubeアニメ『The Last Hand』では、背景、アニメーション、エフェクトに参加した。',
       },
       links: [{ label: 'rednote', url: 'https://xhslink.com/m/1D2mv67VfvD' }],
@@ -483,7 +484,7 @@ window.LYRA_DATA = (() => {
       avatar: 'docs/img/members/peydarg-avatar.jpg',
       bio: {
         zh: '<span data-age="2006"></span>岁，电子音乐制作人。承担了近十款独立游戏的音乐音效开发工作，在 GGJ25 比赛中获北京站音乐音效第二名。单曲《Memory Overload》已被收录至独立音乐游戏《弥赛亚症候群》。音乐曾在 PHONO RECORDS（留声唱片）、Hertz Records 和 ETR Records 等厂牌发行，所创作的配乐被 CCTV7 频道舞台剧采用。喜欢通过叠加大量电子音色，为听众带来更丰富刺激的听觉体验。',
-        en: '<span data-age="2006"></span> years old, an electronic music producer. Composed music and sound effects for nearly ten indie games; placed second in music and sound design at the Beijing round of GGJ25.<br>Single "Memory Overload" appears in the indie rhythm game "Messiah Syndrome"; music released through labels such as PHONO RECORDS, Hertz Records and ETR Records. Favoring dense stacks of electronic textures to give listeners a richer, more exhilarating experience.',
+        en: '<span data-age="2006"></span> years old, electronic music producer. Composed music and sound effects for nearly ten indie games; placed second in music and sound design at the Beijing round of GGJ25.<br>Single "Memory Overload" appears in the indie rhythm game "Messiah Syndrome"; music released through labels such as PHONO RECORDS, Hertz Records and ETR Records. Favoring dense stacks of electronic textures to give listeners a richer, more exhilarating experience.',
         ja: '2006年生まれ。電子音楽プロデューサー。<br>これまでに約10作品のインディーゲームでBGMや効果音の制作を担当。Global Game Jam 2025では、北京会場の音楽・効果音部門で2位を獲得。<br>PHONO RECORDS（留声唱片）、Hertz Records、スペインのETR Recordsなど、国内外の音楽レーベルから楽曲をリリースしている。<br>さまざまな電子音色を重ね合わせ、聴く人に豊かで刺激的なサウンドを届けることを大切にしている。',
       },
       links: [

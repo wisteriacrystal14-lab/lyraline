@@ -480,6 +480,21 @@ html:not([data-theme="dark"]) .home-logo { filter: invert(1); }    /* 白色字�
 .scroll-arrow::after { content: ''; position: absolute; inset: 0; background: var(--accent); animation: cue 1.8s var(--ease-io) infinite; }
 @keyframes cue { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(100%); } }
 
+/* 内部滚动提示：内容可滚动但用户迟迟没翻动时，竖排浮现"按住向下拖动"并闪烁 */
+.drag-hint {
+  position: absolute; top: 50%; right: 3px; transform: translateY(-50%);
+  writing-mode: vertical-rl; text-orientation: mixed;
+  font-size: 11px; letter-spacing: .28em; color: var(--muted);
+  display: flex; align-items: center; gap: 10px;
+  opacity: 0; pointer-events: none; z-index: 2;
+  transition: opacity .6s var(--ease-out);
+}
+.drag-hint::before { content: ''; width: 1px; height: 30px; background: var(--accent); order: 2; }
+.drag-hint span { order: 1; }
+/* 呼吸式渐显渐出：慢周期、单次明暗，不闪烁 */
+.drag-hint.is-show { animation: dragBreathe 3.6s ease-in-out infinite; }
+@keyframes dragBreathe { 0%, 100% { opacity: .12; } 50% { opacity: .9; } }
+
 /* ---------- B 作品 ---------- */
 .works-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 8px; align-items: start; }
 .track { display: flex; gap: 16px; align-items: center; padding: 14px 0; }
@@ -522,26 +537,7 @@ html:not([data-theme="dark"]) .home-logo { filter: invert(1); }    /* 白色字�
 .avatar::after { content: ''; position: absolute; inset: 44%; border-radius: 50%; background: var(--bg); }   /* 小唱片头像 */
 .member h3 { font-size: 14px; }
 .member p { font-size: 12px; color: var(--muted); }
-/* Members 一屏放得下：压缩格子与间距，取消板块内滚动（之前要上下滚才能看到按钮） */
-#members { padding-top: 5vh; padding-bottom: 4vh; }
-#members .page-inner { max-height: none; overflow: visible; }
-#members .members-lead, #members .members-note { font-size: 13px; }
-#members .members-lead { margin-bottom: 10px; }
-#members .member { padding: 10px 12px; }
-#members .avatar { width: 48px; height: 48px; margin-bottom: 6px; }
-#members .member h3 { font-size: 13px; }
-#members .member p { font-size: 11px; line-height: 1.5; }
-#members .members-note { margin-top: 10px; }
-#members .btn-more { margin-top: 12px; }
-@media (max-height: 700px) {
-  #members { padding-top: 3vh; padding-bottom: 2vh; }
-  #members .members-lead, #members .members-note { font-size: 12px; }
-  #members .members-lead { margin-bottom: 6px; }
-  #members .member { padding: 7px 10px; }
-  #members .avatar { width: 40px; height: 40px; margin-bottom: 4px; }
-  #members .members-note { margin-top: 6px; }
-  #members .btn-more { margin-top: 8px; height: 46px; }
-}
+/* Members 恢复旧版：内容超出一屏时在 .page-inner 内原生滚动，滚到底再翻页 */
 
 /* ---------- E 关于我们 ---------- */
 .platforms { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 26px; }
@@ -686,9 +682,98 @@ html[data-case-mode="v2"] .case-footer-v2 {
 }
 .case-footer-v2 .strap-closed { opacity: 0; }
 .case-footer-v2 .strap-open { opacity: 1; transform: translate(-50%, -50%); }
-.footer.is-active .case-footer-v2 .case-lid { transform: none; }
 .footer.is-active .case-footer-v2 .strap-closed { opacity: 1; transition-delay: .72s; }
 .footer.is-active .case-footer-v2 .strap-open { opacity: 0; transition-delay: .72s; }
+
+/* =====================================================================
+   v3（默认）：MG 转场残影。case4.jpg 多层错开、弹性划走 / 划入。
+   v1（?case=v1）与 v2（?case=new）完整保留。
+   --------------------------------------------------------------------- */
+.case-v3, .case-footer-v3 { display: none; }
+.wipe-layer {
+  position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; will-change: transform, opacity;
+  transform-origin: 50% 50%;
+}
+/* 主层：完整 case4.jpg（最底，向下划得最快） */
+.case-v3 .w-main { z-index: 1; opacity: 1; }
+/* 拖影层：灰色横条（参考 casetrial.mp4 的白底灰条），叠在主层上方，位移逐级更小 → 形成拖尾阶梯。
+   开场背景已改为透明露出网站，故拖影用灰系而非白系，才能在浅色网站上看见。 */
+.case-v3 .w1, .case-v3 .w2, .case-v3 .w3, .case-v3 .w4, .case-v3 .w5 {
+  background: linear-gradient(to bottom, rgba(120,120,120,.42) 0%, rgba(150,150,150,.20) 60%, rgba(150,150,150,0) 100%);
+  background-size: 100% 11vh; background-position: top; background-repeat: no-repeat;
+}
+.case-v3 .w1 { z-index: 2; }
+.case-v3 .w2 { z-index: 3; }
+.case-v3 .w3 { z-index: 4; }
+.case-v3 .w4 { z-index: 5; }
+.case-v3 .w5 { z-index: 6; }
+
+/* 残影划走后直接露出网站本身，不再用深色底遮挡 */
+html[data-case-mode="v3"] .intro { background: transparent; }
+html[data-case-mode="v3"] .intro-lid,
+html[data-case-mode="v3"] .intro-base,
+html[data-case-mode="v3"] .intro .case-v1,
+html[data-case-mode="v3"] .case-v2 { display: none; }
+html[data-case-mode="v3"] .case-v3 { display: block; }
+/* 透明背景下提示文字改深色，开屏不再显示白色字标（logo 已从 HTML 移除） */
+html[data-case-mode="v3"] .intro-mark { color: var(--ink); }
+html[data-case-mode="v3"] .intro-logo { display: none; }
+/* 开场：初始铺满；is-open 时向下划走，弹性缓动，残影层逐层延迟并略微缩放/偏移制造拖影 */
+html[data-case-mode="v3"] .case-v3 .wipe-layer {
+  transform: translateY(0) scale(1);
+  transition: transform 1.05s cubic-bezier(.62,.02,.24,1), opacity 1.05s ease-in;
+}
+/* 拖影横条初始隐藏在顶部；开箱时随主图下移并淡出，留在主图边缘之后形成尾巴 */
+html[data-case-mode="v3"] .case-v3 .w1,
+html[data-case-mode="v3"] .case-v3 .w2,
+html[data-case-mode="v3"] .case-v3 .w3,
+html[data-case-mode="v3"] .case-v3 .w4,
+html[data-case-mode="v3"] .case-v3 .w5 { opacity: 0; }
+html[data-case-mode="v3"] .intro:not(.is-open) .case-v3 .w1,
+html[data-case-mode="v3"] .intro:not(.is-open) .case-v3 .w2,
+html[data-case-mode="v3"] .intro:not(.is-open) .case-v3 .w3,
+html[data-case-mode="v3"] .intro:not(.is-open) .case-v3 .w4,
+html[data-case-mode="v3"] .intro:not(.is-open) .case-v3 .w5 { opacity: 0; }
+.intro.is-open .case-v3 .w-main { transform: translateY(120%) scale(1.01); }
+/* 拖影逐级下移、逐级淡出；终点比主图小 → 尾巴留在上方；延迟错开制造弹性拖尾 */
+.intro.is-open .case-v3 .w1 { animation: ghost1 1.05s cubic-bezier(.5,0,.3,1) .05s forwards; }
+.intro.is-open .case-v3 .w2 { animation: ghost2 1.05s cubic-bezier(.5,0,.3,1) .12s forwards; }
+.intro.is-open .case-v3 .w3 { animation: ghost3 1.05s cubic-bezier(.5,0,.3,1) .19s forwards; }
+.intro.is-open .case-v3 .w4 { animation: ghost4 1.05s cubic-bezier(.5,0,.3,1) .26s forwards; }
+.intro.is-open .case-v3 .w5 { animation: ghost5 1.05s cubic-bezier(.5,0,.3,1) .33s forwards; }
+@keyframes ghost1 { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: .7; } 100% { transform: translateY(115%); opacity: 0; } }
+@keyframes ghost2 { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: .52; } 100% { transform: translateY(98%); opacity: 0; } }
+@keyframes ghost3 { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: .38; } 100% { transform: translateY(82%); opacity: 0; } }
+@keyframes ghost4 { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: .26; } 100% { transform: translateY(66%); opacity: 0; } }
+@keyframes ghost5 { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: .16; } 100% { transform: translateY(50%); opacity: 0; } }
+
+/* Thanks：回退到上一版 v1 的绑带合入效果（case-straps 保持显示）。
+   v3 残影合箱代码完整保留，只是不启用；如需再试残影版可改回这段开关。 */
+html[data-case-mode="v3"] .case-footer-v2,
+html[data-case-mode="v3"] .case-footer-v3 { display: none; }
+.case-footer-v3 .wipe-layer { transform: translateY(115%) scale(1.02); opacity: 0; }
+.case-footer-v3 .w-main { z-index: 6; }
+.case-footer-v3 .w1 { z-index: 5; }
+.case-footer-v3 .w2 { z-index: 4; }
+.case-footer-v3 .w3 { z-index: 3; }
+.case-footer-v3 .w4 { z-index: 2; }
+.case-footer-v3 .w5 { z-index: 1; }
+.footer.is-active .case-footer-v3 .wipe-layer {
+  transform: translateY(0) scale(1);
+  transition: transform 1.1s cubic-bezier(.62,.02,.24,1), opacity .9s ease-out;
+}
+.footer.is-active .case-footer-v3 .w-main { opacity: 1; transition-delay: .30s; }
+.footer.is-active .case-footer-v3 .w1 { opacity: .30; transition-delay: .24s; }
+.footer.is-active .case-footer-v3 .w2 { opacity: .22; transition-delay: .18s; }
+.footer.is-active .case-footer-v3 .w3 { opacity: .15; transition-delay: .12s; }
+.footer.is-active .case-footer-v3 .w4 { opacity: .09; transition-delay: .06s; }
+.footer.is-active .case-footer-v3 .w5 { opacity: .05; }
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-case-mode="v3"] .case-v3 .wipe-layer,
+  .case-footer-v3 .wipe-layer { transition-duration: .2s !important; transition-delay: 0s !important; }
+}
 
 /* =====================================================================
    手机端：唱片改为顶部半圆，内容全宽；唱片左右横向弹入弹出
@@ -715,6 +800,8 @@ html[data-case-mode="v2"] .case-footer-v2 {
   .content { margin-left: 0; padding: 0 20px; }
   .page { padding: calc(12vh + var(--disc-r) + 3vh) 0 5vh; justify-content: flex-start; }
   .page-inner { padding-right: 0; }
+  /* 拖动提示放到竖向滚动条右侧（越过 content 的 20px 内边距，贴近视口右缘） */
+  .drag-hint { right: -14px; }
   .card { padding: 14px 0; }
   .card-date { font-size: 14px; }
   .dir-list a { padding: 10px 0; }
@@ -897,9 +984,15 @@ body.is-detail .sub-filter { display: none; }
 .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .player.ph { max-height: none; background-color: var(--bg-2); background-size: cover; background-position: center; }
 .player.ph span { padding: 6px 12px; background: var(--bg); }
+.player.ph span:empty { display: none; }   /* 占位文案三语已清空：不留下空色块 */
 .player-link { display: grid; place-items: center; text-decoration: none; color: var(--ink); }
-.player-link span { padding: 10px 20px; background: var(--bg); border: 1px solid var(--ink); transition: background .25s var(--ease-out), color .25s var(--ease-out); }
+.player-link span { padding: 10px 20px; background: var(--bg); border: 1px solid var(--ink); transition: background .25s var(--ease-out), color .25s var(--ease-out), opacity .3s var(--ease-out); }
 .player-link:hover span { background: var(--ink); color: var(--bg); }
+/* 有鼠标时：按钮默认藏起来不挡封面，悬停/聚焦才浮现 */
+@media (hover: hover) {
+  .player-link span { opacity: 0; }
+  .player-link:hover span, .player-link:focus-visible span { opacity: 1; }
+}
 .player-src { display: flex; gap: 18px; margin-bottom: 20px; }
 .player-src button {
   border: 0; background: none; padding: 4px 0; cursor: pointer; color: var(--muted);
