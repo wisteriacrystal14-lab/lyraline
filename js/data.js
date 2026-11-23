@@ -55,6 +55,21 @@ window.LYRA_DATA = (() => {
     ]},
   ];
 
+  /* ---------------- 百聯ZX 大屏新闻共用图片 ----------------
+     正文四张整图 + gallery 四宫格；顺序按截图确认后的版本。 */
+  const zxFullImages = [
+    'docs/img/ZX/ZX1a189112e0c472d0196970a4de2c8402e3690980697966859.jpg@1052w_!web-dynamic.webp',
+    'docs/img/ZX/ZX20dda9ae654f2ffd8e99c2d1b4046568e3690980697966859.jpg@1052w_!web-dynamic.avif',
+    'docs/img/ZX/ZX3.jpg',
+    'docs/img/ZX/ZX6.jpg',
+  ].map(src => `<p class="prose-img"><img src="${src}" alt=""></p>`).join('');
+  const zxGridImages = [
+    'docs/img/ZX/ZX4.5ed4d42e436f2820d762d83a8b8aade3690980697966859.jpg@1052w_!web-dynamic.avif',
+    'docs/img/ZX/ZX5.jpg',
+    'docs/img/ZX/ZX4.jpg',
+    'docs/img/ZX/ZX7.jpg',
+  ];
+
   /* ---------------- 新闻 ----------------
      id    : 唯一 id，用在网址 news.html?id=xxx
      date  : 显示用日期（'2025.xx.xx' 这种未定日期也可以）
@@ -119,6 +134,32 @@ window.LYRA_DATA = (() => {
         ja: '<p>翌年のM3 2027への出展を予定しており、開催日は4月26日の見込みです。</p><p>以下は製品のプレビューとなります。詳細は順次公開してまいります。</p>' +
           '<p class="prose-img"><img src="docs/img/m3-2027-01-case.jpg" alt=""></p><p class="prose-img"><img src="docs/img/m3-2027-02-sticker.jpg" alt=""></p><p class="prose-img"><img src="docs/img/m3-2027-03-postcard.jpg" alt=""></p><p class="prose-img"><img src="docs/img/m3-2027-04-standee.jpg" alt=""></p><p class="prose-img"><img src="docs/img/m3-2027-05-cd-booklet.jpg" alt=""></p><p class="prose-img"><img src="docs/img/m3-2027-06-badge.jpg" alt=""></p>',
       },
+    },
+    {
+      id: 'bailian-zx',
+      date: '2026.10.14',
+      tag: 'event',
+      hot: true,
+      title: { zh: '原创音乐企划 在 上海百联 ZX大屏!!', en: 'LyraLine Appears on the Large Screens at Bailian ZX in Shanghai!!', ja: '「共鳴線」が上海・百聯ZXの大型ビジョンに登場！！' },
+      summary: {
+        zh: '共鸣线近期作品与插画将在上海百联ZX大屏宣传。',
+        en: 'LyraLine recent works and illustrations will appear on the large screens at Bailian ZX in Shanghai.',
+        ja: '上海・百聯ZXの大型ビジョンに、共鳴線の近期の作品とイラストが登場します。',
+      },
+      body: {
+        zh: '<p>共鸣线近期的作品与插画会在上海百联ZX的屏幕上进行宣传。</p>' +
+          '<p>🕐10月–11月 12:00–22:00<br>📍百联ZX南京东路店户外大屏、入口格栅屏、室内大屏、包梁屏</p>' +
+          '<p>欢迎前来打卡！后续会有更多未公开作品通过百联ZX大屏释出。</p>' + zxFullImages,
+        en: '<p>Recent works and illustrations from LyraLine will be shown on the large screens at Bailian ZX, a popular subculture spot in Shanghai.</p>' +
+          '<p>Every day in October and November, 12:00–22:00 (UTC+8)<br>Bailian ZX Nanjing East Road location<br>Outdoor large screen, entrance grille screen, indoor large screen, and beam-wrapped screen</p>' +
+          '<p>If you are in the area, please stop by and take some photos!</p>' +
+          '<p>We plan to unveil more new works at Bailian ZX in the future. Stay tuned!</p>' + zxFullImages,
+        ja: '<p>上海の人気サブカルスポット「百聯ZX」にて、近期の作品やイラストが大型ビジョンで公開されます。</p>' +
+          '<p>10月中、11月 毎日12:00〜22:00(UTC+8)<br>百聯ZX 南京東路店<br>屋外大型ビジョン・エントランスのLEDスクリーン・館内</p>' +
+          '<p>お近くにお越しの際は、ぜひ立ち寄って写真を撮ってみてください！</p>' +
+          '<p>今後も新作を百聯ZXにて順次お披露目する予定です。どうぞお楽しみに！</p>' + zxFullImages,
+      },
+      gallery: zxGridImages,
     },
     {
       id: 'website',
@@ -317,9 +358,9 @@ window.LYRA_DATA = (() => {
       line: { zh: '一座巨大的城市遗迹。', en: 'A vast ruined city.', ja: '巨大な都市遺跡。' },
       credits: [],
       note: {
-        zh: '<p>Aqua意为水上，Polis意为都市。</p><p>水都市介绍：全称为水都特别市，亦被称为“水上都市”。英文：Aquapolis Special City／日文：アクアポリス特別市。别称“沚”“沚州”等。是“水都地区自治会”的首都。因位于海岸线上的浅水浅滩而得名“沚”。水都市是一座港口城市，是东方？？？大陆上的重要城市。<br>在大灾难前的200年里，水都市一直是全球重要的经济中心，外交中心及？？？洲最大的城市之一。<br>水都拥有？？？等景点。水都是历史文化名城，文化底蕴深厚。<br>水都行政辖区面积10710平方公里，截止大灾难发生前，水都特别市辖区内人口达到1100万（人口密度1027.08人/平方千米）。<br>因为历史原因，水都特别市是一座国际化的，多民族杂居的世界性大都市，无特定主要民族（种族），亦无指定官方语言。<br>水都市花为木槿花。<br>截止大灾难发生前，水都特别市总GDP达到了38223.94亿元，人均GDP亦达到了34.75万。但水都特别市辖区内有明显的贫富分化，贫民区的部分人们常年活在温饱线上下。<br>水都特别市是“水都地区自治会”的首都。水都特别市下辖八区（市辖区）三府（相当于县级市）六县（相当于县城）。<br>中心城区（水都市内四区／亦被称为“内四区”。）主要位于水都外环环线以内，是全市人口密度最高的区域，政府机关设置在内四区中的“水上区”。<br>近郊城区（水都市外四区／亦被称为“外四区”。）主要位于水都外环环线以外与首都大环线之内。其中外四区中的“北门区”是水都市的主要贫民区。</p>',
-        en: '<p>Aqua means "water" and Polis means "city".</p><p>Water City — officially the Water Capital Special City, also known as "the City on the Water." English: Aquapolis Special City / Japanese: アクアポリス特別市. Also called "Zhi" or "Zhizhou," among other names. It is the capital of the "Water Capital Regional Autonomous Association." The name "Zhi" comes from the shallow waters and shoals along its coastline. Water City is a port city and an important city on the eastern ??? continent.<br>For the 200 years before the Great Disaster, Water City remained a major global economic center, a diplomatic hub, and one of the largest cities in ???.<br>Water City is home to ??? and other attractions. It is a historic and cultural city with a deep cultural heritage.<br>The administrative area of Water City covers 10,710 square kilometers. Just before the Great Disaster, the population within the Water Capital Special City reached 11 million (population density: 1,027.08 people per square kilometer).<br>For historical reasons, the Water Capital Special City is an international, multi-ethnic world metropolis with no single dominant ethnic group and no designated official language.<br>The city flower of Water City is the hibiscus.<br>Before the Great Disaster, the total GDP of the Water Capital Special City reached 3,822.394 billion yuan, with a per capita GDP of 347,500 yuan. Yet stark wealth gaps existed within its jurisdiction, and many in the slums lived perpetually at or below the subsistence line.<br>The Water Capital Special City is the capital of the "Water Capital Regional Autonomous Association." It administers eight districts (municipal districts), three prefectures (equivalent to county-level cities), and six counties (equivalent to county seats).<br>The central urban area (the four inner districts of Water City, also called the "Inner Four") lies mainly inside the Water City Outer Ring Road. It is the most densely populated part of the city, and government offices are located in the "Water District" of the Inner Four.<br>The suburban urban area (the four outer districts of Water City, also called the "Outer Four") lies mainly beyond the Water City Outer Ring Road and inside the Capital Ring Road. Among the Outer Four, the "North Gate District" is Water City\'s main slum.</p>',
-        ja: '<p>Aquaは水上、Polisは都市の意。</p><p>水都市紹介：正式名称は水都特別市、「水上都市」とも呼ばれる。英語：Aquapolis Special City／日本語：アクアポリス特別市。「沚」「沚州」などの別称を持つ。「水都地区自治会」の首都である。海岸線上の浅い水域と浅瀬に位置することから「沚」の名を得た。水都市は港湾都市であり、東方？？？大陸上の重要な都市である。<br>大災害前の200年間、水都市は世界有数の経済中心地であり、外交の中心地でもあり、？？？州最大の都市の一つであり続けた。<br>水都には？？？などの名所がある。水都は歴史文化の名城であり、深い文化的な蓄積を持つ。<br>水都の行政区域面積は10710平方キロメートル。大災害発生前の時点で、水都特別市の管内人口は1100万人（人口密度1027.08人／平方キロメートル）に達していた。<br>歴史的な事情により、水都特別市は国際的で多民族が混然と暮らす世界都市であり、特定の主要民族（人種）も指定公用語も存在しない。<br>水都市の市の花はムクゲである。<br>大災害発生前、水都特別市の総GDPは38223.94億元、一人当たりGDPも34.75万元に達した。しかし管内には顕著な貧富の差があり、スラム街の人々は長年ぎりぎりの生活を強いられていた。<br>水都特別市は「水都地区自治会」の首都である。八つの区（市轄区）、三つの府（県級市に相当）、六つの県（県城に相当）を管轄する。<br>中心市街地（水都市の内四区／「内四区」とも呼ばれる）は主に水都外環状線の内側にあり、全市で最も人口密度が高い地域で、政府機関は内四区の「水上区」に置かれている。<br>近郊地域（水都市の外四区／「外四区」とも呼ばれる）は主に水都外環状線の外側と首都大環状線の内側に位置する。外四区のうち「北門区」が水都市の主要なスラム街である。</p>',
+        zh: '<p>Aqua意为水上，Polis意为都市。</p><p>水都市介绍：将于本周内公开。</p>',
+        en: '<p>Aqua means "water" and Polis means "city".</p><p>Aquapolis introduction: To be released within this week.</p>',
+        ja: '<p>Aquaは水上、Polisは都市の意。</p><p>水都市紹介：今週中に公開予定です。</p>',
       },
     },
     {

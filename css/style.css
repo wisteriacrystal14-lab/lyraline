@@ -843,7 +843,17 @@ html[data-case-mode="v3"] .case-footer-v3 { display: none; }
   .case-strap { width: 100vw; }
   .case-banner { width: clamp(150px, 32vw, 240px); }
   .case-character { width: clamp(140px, 30vw, 220px); }
-  .footer-line, .footer-copy, .footer-top { box-shadow: 0 0 0 5px var(--bg); }
+  /* 手机端：箱带与底角会穿过文案区，用同色渐变遮罩托底，文案与插画保持在上层。 */
+  .footer { isolation: isolate; }
+  .footer::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 50%; z-index: 1; pointer-events: none;
+    background: linear-gradient(to bottom, transparent 0, var(--bg) 9%, var(--bg) 100%);
+  }
+  .footer .case-scene,
+  .footer .footer-line,
+  .footer .footer-copy,
+  .footer .footer-top { z-index: 2; }
 }
 
 /* =====================================================================
