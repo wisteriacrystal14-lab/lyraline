@@ -292,7 +292,20 @@
   const next = () => tryFlip(1);
   const prev = () => tryFlip(-1);
 
-  window.addEventListener('resize', () => goTo(index, { instant: true }));
+  /* ---------- 视口高度锁定：手机地址栏收起/展开会改变 dvh，导致每屏高度跳变、块面闪动。
+        用首次测到的高度固定 --app-h，只有宽度变化（横竖屏切换）才更新并重新定位。 ---------- */
+  let lockedW = window.innerWidth;
+  function lockAppHeight(force = false) {
+    const w = window.innerWidth;
+    if (!force && w === lockedW) return false;      // 只是高度变化（地址栏）→ 保持锁定，不重排
+    lockedW = w;
+    document.documentElement.style.setProperty('--app-h', window.innerHeight + 'px');
+    return true;
+  }
+  lockAppHeight(true);
+  window.addEventListener('resize', () => {
+    if (lockAppHeight()) goTo(index, { instant: true });   // 仅宽度变化才重定位
+  });
   window.addEventListener('hashchange', () => {
     const i = slides.findIndex(s => '#' + s.id === location.hash);
     if (i >= 0 && i !== index) goTo(i);

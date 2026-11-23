@@ -55,15 +55,15 @@
 
     { id: 6, type: 'Single', mode: 'file',
       name: { zh: '水上都市', en: 'Aquapolis', ja: 'アクアポリス' },
-      duration: null, musicUrl: 'docs/audio/aquapolis-preview.wav', cover: '' },
+      duration: null, musicUrl: 'docs/audio/aquapolis-preview.mp3', cover: '' },
 
     { id: 7, type: 'Single', mode: 'file',
       name: { zh: '余响行路', en: 'Keleuthos', ja: 'ケレウソス' },
-      duration: null, musicUrl: 'docs/audio/keleuthos-preview.wav', cover: '' },
+      duration: null, musicUrl: 'docs/audio/keleuthos-preview.mp3', cover: '' },
 
     { id: 8, type: 'Single', mode: 'file',
       name: { zh: '水上都市 (VIP mix)', en: 'Aquapolis (VIP mix)', ja: 'アクアポリス (VIP mix)' },
-      duration: null, musicUrl: 'docs/audio/aquapolis-vip-preview.wav', cover: '' },
+      duration: null, musicUrl: 'docs/audio/aquapolis-vip-preview.mp3', cover: '' },
 
     { id: 9, type: 'Single', mode: 'file',
       name: { zh: '暮霭', en: 'Haze', ja: '夕靄' },

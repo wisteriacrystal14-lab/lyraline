@@ -376,7 +376,7 @@ html:not([data-theme="dark"]) .site-logo img { filter: invert(1); }
 .content { position: relative; z-index: 2; margin-left: var(--content-left); padding-right: var(--content-right); }
 .page {
   position: relative;
-  height: 100vh; height: 100dvh;                 /* 每个板块正好一屏 */
+  height: 100vh; height: var(--app-h, 100svh);   /* 每个板块正好一屏；用锁定高度避免手机地址栏收起时跳变 */
   display: flex; flex-direction: column; justify-content: center;
   padding: 9vh 0 7vh;
   /* 内容溢出由 .page-inner 处理。
@@ -562,13 +562,13 @@ html:not([data-theme="dark"]) .home-logo { filter: invert(1); }    /* 白色字�
    ===================================================================== */
 .footer {
   position: relative; z-index: 2;
-  height: 100vh; height: 100dvh;
+  height: 100vh; height: var(--app-h, 100svh);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; gap: 14px; padding: 8vh 24px; overflow: hidden;
 }
 .case-straps { position: absolute; inset: 0; pointer-events: none; }
 .case-strap {
-  position: absolute; left: 50%; width: 100vw; height: 100vh; height: 100dvh;
+  position: absolute; left: 50%; width: 100vw; height: 100vh; height: var(--app-h, 100svh);
   transform: translateX(-50%); object-fit: contain; object-position: center;
 }
 /* 整张 open.png 含左右两根绑带；用 clip-path 拆成两半，各自从上下合入 */
